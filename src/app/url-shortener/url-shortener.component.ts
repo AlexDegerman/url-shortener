@@ -29,6 +29,7 @@ export class UrlShortenerComponent implements OnInit {
     this.results = false;
     this.submission = true;
     this.url = "";
+    this.copied = false;
   }
   copyUrl(){
     this.clipboard.copy(this.shortenedUrl);

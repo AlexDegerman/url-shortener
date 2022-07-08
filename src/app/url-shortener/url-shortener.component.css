@@ -1,4 +1,18 @@
 .form-group {
   text-align: center;
-  
+}
+.title {
+  font-size:4rem;
+}
+.urlField {
+  font-size: 2rem;
+}
+button {
+  font-size: 2rem;
+}
+.resultUrl {
+  font-size: 2rem;
+}
+.reset {
+  margin-top: 1rem;
 }
