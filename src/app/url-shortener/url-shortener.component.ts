@@ -23,4 +23,9 @@ export class UrlShortenerComponent implements OnInit {
       this.results = true;
     })
   }
+  reset(){
+    this.results = false;
+    this.submission = true;
+    this.url = "";
+  }
 }
