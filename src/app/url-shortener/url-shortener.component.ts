@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {NgTinyUrlService} from 'ng-tiny-url';
+import {Clipboard} from '@angular/cdk/clipboard';
 
 @Component({
   selector: 'app-url-shortener',
@@ -11,7 +12,8 @@ export class UrlShortenerComponent implements OnInit {
   shortenedUrl: any;
   submission = true;
   results = false;
-  constructor(private tinyUrl: NgTinyUrlService) { }
+  copied = false;
+  constructor(private tinyUrl: NgTinyUrlService, private clipboard: Clipboard) { }
 
   ngOnInit(): void {
   }
@@ -27,5 +29,9 @@ export class UrlShortenerComponent implements OnInit {
     this.results = false;
     this.submission = true;
     this.url = "";
+  }
+  copyUrl(){
+    this.clipboard.copy(this.shortenedUrl);
+    this.copied = true;
   }
 }
