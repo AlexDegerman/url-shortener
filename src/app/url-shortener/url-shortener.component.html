@@ -1,7 +1,9 @@
 <h1 class="form-group title">URL Shortener</h1>
 <div class="form-group" *ngIf="submission">
 <input class="urlField" type="text" [(ngModel)]="url" placeholder="Enter URL">
+<div>
 <button (click)="shortenUrl()">Submit</button>
+</div>
 </div>
 <div class="form-group" *ngIf="results">
 <p class="resultUrl"> {{shortenedUrl}}</p>
